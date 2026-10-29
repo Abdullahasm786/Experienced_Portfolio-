@@ -17,7 +17,8 @@ export default function OperationsSystem() {
   const place = ["lg:col-start-1 lg:row-start-1", "lg:col-start-3 lg:row-start-1", "lg:col-start-1 lg:row-start-3", "lg:col-start-3 lg:row-start-3"];
 
   return (
-    <section id="expertise" className="py-24 md:py-36">
+    <section id="expertise" className="force-dark relative overflow-hidden py-20 md:py-28">
+      <span aria-hidden className="glow-a" />
       <div className="wrap">
         <SectionHeader label="03 / Expertise" title="Seeing the system behind every issue." />
 

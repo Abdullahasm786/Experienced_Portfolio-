@@ -11,8 +11,9 @@ function Accent({ i }: { i: number }) {
 
 export default function CareerHighlights() {
   return (
-    <section aria-label="Career highlights" className="border-y border-line bg-ink2">
-      <div className="wrap">
+    <section aria-label="Career highlights" className="force-dark relative overflow-hidden">
+      <span aria-hidden className="glow-a" />
+      <div className="wrap relative">
         <ul className="grid grid-cols-2 lg:grid-cols-4">
           {highlights.map((h, i) => (
             <li key={h.label} className={`border-line py-9 pr-4 lg:py-14 ${i % 2 ? "pl-5 border-l" : ""} ${i > 1 ? "border-t lg:border-t-0" : ""} ${i > 0 ? "lg:border-l lg:pl-8" : ""}`}>

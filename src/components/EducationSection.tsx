@@ -3,7 +3,7 @@ import { Reveal, SectionHeader } from "./ui";
 
 export default function EducationSection() {
   return (
-    <section id="education" className="bg-ink2 py-24 md:py-36">
+    <section id="education" className="bg-ink2 py-20 md:py-28">
       <div className="wrap grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <SectionHeader label="08 / Education" title="A technology foundation." className="!mb-8" />

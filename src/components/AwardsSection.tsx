@@ -31,12 +31,12 @@ function Mark({ kind }: { kind: "quarter" | "month" }) {
 
 export default function AwardsSection() {
   return (
-    <section id="recognition" className="py-24 md:py-36">
+    <section id="recognition" className="py-20 md:py-28">
       <div className="wrap">
         <SectionHeader label="07 / Recognition" title="Leadership, recognised." />
         <div className="grid gap-px border border-line bg-line md:grid-cols-2">
           {awards.map((a, i) => (
-            <Reveal key={a.kind} delay={i * 120} className="bg-ink">
+            <Reveal key={a.kind} delay={i * 120} className="bg-ink transition-colors duration-300 hover:bg-signal/5">
               <article className="flex h-full flex-col items-start gap-8 p-8 sm:flex-row sm:items-center md:p-10">
                 <div className="w-36 shrink-0 sm:w-44"><Mark kind={a.kind} /></div>
                 <div>

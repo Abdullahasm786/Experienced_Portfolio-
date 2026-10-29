@@ -54,7 +54,7 @@ function ResolutionPath() {
 
 export default function ProductSupportSection() {
   return (
-    <section id="direction" className="bg-ink2 py-24 md:py-36">
+    <section id="direction" className="bg-ink2 py-20 md:py-28">
       <div className="wrap">
         <SectionHeader label="04 / Direction" title={<>Customer-first thinking. <span className="text-signal">Technology-focused growth.</span></>}>
           <p>Product support requires more than providing an answer. It requires understanding the reported issue, collecting useful information, documenting the investigation, coordinating with the right people, and communicating the next steps. My customer operations experience provides a foundation for developing these capabilities in technology environments.</p>
@@ -63,7 +63,7 @@ export default function ProductSupportSection() {
         <Reveal><p className="eyebrow mb-6">Transferable experience &amp; career direction</p></Reveal>
         <div className="grid gap-px border border-line bg-line md:grid-cols-3">
           {directionModules.map((m, i) => (
-            <Reveal key={m.id} delay={i * 100} className="bg-ink2">
+            <Reveal key={m.id} delay={i * 100} className="bg-ink2 transition-colors duration-300 hover:bg-signal/5">
               <article className="h-full p-7 md:p-9">
                 <p className="font-mono text-xs tracking-[0.18em] text-ember">MODULE {m.id}</p>
                 <h3 className="mt-3 font-display text-3xl tracking-tight">{m.name}</h3>

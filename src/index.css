@@ -18,7 +18,7 @@ body, header { transition: background-color .3s, color .3s; }
   --ease: cubic-bezier(.22, .8, .24, 1);
 }
 
-html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; background: rgb(var(--c-ink)); }
+html { scroll-behavior: smooth; scroll-padding-top: 4rem; background: rgb(var(--c-ink)); }
 body {
   background: rgb(var(--c-ink));
   color: rgb(var(--c-ivory));
@@ -28,7 +28,6 @@ body {
 }
 ::selection { background: rgb(var(--c-signal)); color: rgb(var(--c-ink)); }
 :focus-visible { outline: 2px solid rgb(var(--c-signal)); outline-offset: 3px; border-radius: 2px; }
-section[id] { scroll-margin-top: 5.5rem; }
 
 @layer components {
   .wrap { @apply mx-auto w-full max-w-[1320px] px-5 sm:px-8 lg:px-12; }
@@ -98,11 +97,86 @@ html[data-theme="light"] #top::before {
     radial-gradient(40% 40% at 8% 90%, rgb(var(--c-ember) / .12), transparent 70%);
 }
 html[data-theme="light"] #top > * { position: relative; }
-html[data-theme="light"] section[aria-label="Career highlights"] { background: rgb(var(--c-ivory)); color: rgb(var(--c-ink)); border-color: transparent; }
-html[data-theme="light"] section[aria-label="Career highlights"] li { border-color: rgb(var(--c-ink) / .18); }
-html[data-theme="light"] section[aria-label="Career highlights"] .text-mute { color: rgb(var(--c-ink) / .65); }
-html[data-theme="light"] section[aria-label="Career highlights"] svg [stroke="rgb(var(--c-signal))"] { stroke: rgb(143 170 255); }
 html[data-theme="light"] .bg-ink2 { box-shadow: inset 0 1px 0 rgb(255 255 255 / .7); }
 html[data-theme="light"] .border.bg-ink2 { box-shadow: 0 1px 2px rgb(17 20 27 / .05), 0 12px 32px -18px rgb(17 20 27 / .22); }
 html[data-theme="light"] .btn-primary { box-shadow: 0 8px 22px -10px rgb(var(--c-signal) / .7); }
 html[data-theme="light"] header.border-b { background-color: rgb(var(--c-ink) / .82); }
+
+/* ---- Elevated visual layer ---- */
+.force-dark {
+  --c-ink: 10 12 16; --c-ink2: 17 21 28; --c-panel: 23 28 37; --c-ivory: 241 238 231;
+  --c-mute: 165 173 185; --c-signal: 115 150 255; --c-ember: 255 139 92; --c-line: 48 55 68;
+  background: rgb(var(--c-ink)); color: rgb(var(--c-ivory));
+}
+.glow-a {
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(45% 60% at 90% 0%, rgb(115 150 255 / .22), transparent 70%), radial-gradient(35% 45% at 5% 100%, rgb(255 139 92 / .14), transparent 70%);
+}
+.force-dark > .wrap { position: relative; }
+.gradient-text {
+  background: linear-gradient(95deg, rgb(var(--c-signal)) 10%, rgb(var(--c-ember)) 95%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.numeral {
+  position: absolute; right: 0; top: -1.5rem; font-family: "Space Grotesk", sans-serif; font-weight: 700;
+  font-size: clamp(5rem, 15vw, 12rem); line-height: 1; letter-spacing: -0.06em; pointer-events: none; user-select: none;
+  color: transparent; -webkit-text-stroke: 1px rgb(var(--c-line)); opacity: .7;
+}
+.hero-frame {
+  border: 1px solid rgb(var(--c-line));
+  background: linear-gradient(160deg, rgb(var(--c-panel) / .75), rgb(var(--c-ink2) / .4));
+  box-shadow: 0 40px 80px -40px rgb(var(--c-signal) / .45), 0 0 0 6px rgb(var(--c-ink2) / .5);
+  backdrop-filter: blur(6px);
+}
+.tick { position: absolute; width: 14px; height: 14px; border: 2px solid rgb(var(--c-ember)); }
+.tick.tl { left: -1px; top: -1px; border-right: 0; border-bottom: 0; }
+.tick.tr { right: -1px; top: -1px; border-left: 0; border-bottom: 0; }
+.tick.bl { left: -1px; bottom: -1px; border-right: 0; border-top: 0; }
+.tick.br { right: -1px; bottom: -1px; border-left: 0; border-top: 0; }
+.chip {
+  z-index: 5; display: flex; align-items: center; gap: .6rem; padding: .6rem 1rem; font-size: .8rem; white-space: nowrap;
+  background: rgb(var(--c-panel)); border: 1px solid rgb(var(--c-line)); color: rgb(var(--c-ivory));
+  box-shadow: 0 18px 40px -18px rgb(0 0 0 / .45);
+}
+.float { animation: float 6s ease-in-out infinite; }
+@keyframes float { 50% { transform: translateY(-10px); } }
+.marquee { overflow: hidden; }
+.marquee-track { display: flex; width: max-content; animation: marq 48s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marq { to { transform: translateX(-50%); } }
+.panel-blue {
+  --c-ink: 10 12 16; --c-ivory: 255 255 255; --c-mute: 208 218 245; --c-signal: 176 200 255; --c-ember: 255 170 130; --c-line: 150 168 230;
+  position: relative; overflow: hidden; color: #fff;
+  background: radial-gradient(60% 70% at 100% 0%, rgb(255 139 92 / .38), transparent 62%),
+              linear-gradient(135deg, #2D50DE 0%, #1B2D8C 55%, #0C1030 100%);
+  box-shadow: 0 50px 100px -50px rgb(45 80 222 / .8);
+}
+.panel-blue::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+  background-image: linear-gradient(rgb(255 255 255 / .06) 1px, transparent 1px), linear-gradient(90deg, rgb(255 255 255 / .06) 1px, transparent 1px);
+  background-size: 48px 48px; mask-image: radial-gradient(70% 70% at 80% 20%, #000, transparent);
+}
+.panel-blue > * { position: relative; z-index: 1; }
+
+/* Contact: warm charcoal panel with cursor spotlight (no blue) */
+.panel-warm {
+  --c-signal: 255 139 92; --c-ember: 255 139 92; --c-line: 58 62 72;
+  position: relative; overflow: hidden;
+  background: radial-gradient(70% 90% at 100% 0%, rgb(255 139 92 / .16), transparent 60%), linear-gradient(145deg, #15171d, #0A0C10 60%);
+  border: 1px solid rgb(var(--c-line)); box-shadow: 0 50px 90px -50px rgb(0 0 0 / .6);
+}
+.spot::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .35s;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgb(255 139 92 / .16), transparent 60%);
+}
+.spot:hover::before { opacity: 1; }
+.spot > * { position: relative; }
+.tile {
+  display: flex; flex-direction: column; justify-content: space-between; gap: 1.4rem; min-height: 9.5rem; padding: 1.25rem; position: relative; overflow: hidden;
+  border: 1px solid rgb(var(--c-line)); background: rgb(255 255 255 / .02);
+  transition: transform .35s var(--ease), border-color .3s, background-color .3s;
+}
+.tile:hover, .tile:focus-visible { transform: translateY(-4px); border-color: rgb(var(--c-ember)); background: rgb(255 139 92 / .06); }
+.tile .arrow { transition: transform .35s var(--ease); }
+.tile:hover .arrow { transform: translate(4px, -4px); }
+.gradient-warm { background: linear-gradient(95deg, #F1EEE7 5%, #FF8B5C 90%); -webkit-background-clip: text; background-clip: text; color: transparent; }

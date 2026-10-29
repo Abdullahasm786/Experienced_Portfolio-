@@ -97,7 +97,7 @@ export default function SiteNavigation() {
 
       <div
         id="mobile-menu"
-        className={`lg:hidden overflow-hidden border-t border-line/70 bg-ink transition-[opacity,transform,visibility] duration-300 ease-out ${
+        className={`absolute inset-x-0 top-full lg:hidden overflow-hidden border-t border-line/70 bg-ink transition-[opacity,transform,visibility] duration-300 ease-out ${
           open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-2 opacity-0"
         }`}
       >

@@ -14,7 +14,8 @@ export function Reveal({ children, delay = 0, className = "" }: { children: Reac
 
 export function SectionHeader({ label, title, children, className = "" }: { label: string; title: ReactNode; children?: ReactNode; className?: string }) {
   return (
-    <header className={`mb-12 md:mb-16 ${className}`}>
+    <header className={`relative mb-12 md:mb-16 ${className}`}>
+      <span aria-hidden className="numeral">{label.split(" / ")[0]}</span>
       <Reveal>
         <p className="eyebrow mb-5 flex items-center gap-3">
           <span aria-hidden className="h-px w-8 bg-signal" />

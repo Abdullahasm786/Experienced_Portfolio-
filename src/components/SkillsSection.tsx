@@ -6,7 +6,7 @@ const icons = { users: Users, headset: Headset, gauge: Gauge, chart: ChartColumn
 
 export default function SkillsSection() {
   return (
-    <section id="capabilities" className="bg-ink2 py-24 md:py-36">
+    <section id="capabilities" className="bg-ink2 py-20 md:py-28">
       <div className="wrap">
         <SectionHeader label="06 / Capabilities" title="What I bring to a support team." />
         <div className="grid border-t border-line md:grid-cols-2 lg:grid-cols-6">
@@ -14,7 +14,7 @@ export default function SkillsSection() {
             const Icon = icons[g.icon as keyof typeof icons];
             const wide = i < 3 ? "lg:col-span-2" : "lg:col-span-3";
             return (
-              <Reveal key={g.name} delay={i * 70} className={`border-b border-line md:odd:border-r lg:border-r lg:last:border-r-0 ${wide} ${i === 3 ? "lg:border-r" : ""}`}>
+              <Reveal key={g.name} delay={i * 70} className={`transition-colors duration-300 hover:bg-signal/5 border-b border-line md:odd:border-r lg:border-r lg:last:border-r-0 ${wide} ${i === 3 ? "lg:border-r" : ""}`}>
                 <section aria-labelledby={`sk-${i}`} className="p-6 md:p-8">
                   <Icon aria-hidden size={22} className={i === 4 ? "text-ember" : "text-signal"} strokeWidth={1.5} />
                   <h3 id={`sk-${i}`} className="mt-5 font-mono text-xs uppercase tracking-[0.18em]">{g.name}</h3>

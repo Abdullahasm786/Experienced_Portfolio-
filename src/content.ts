@@ -7,7 +7,7 @@ export const profile = {
   phone: "+91 9442563873",
   phoneHref: "+919442563873",
   /** Leave empty to keep the LinkedIn link hidden. */
-  linkedinUrl: "",
+  linkedinUrl: "https://www.linkedin.com/in/abdullah-asm-357643216",
   /** Drop the real PDF into /public with this exact name to enable download CTAs. */
   resumePath: "/Abdullah_ASM_Resume.pdf",
   resumeFileName: "Abdullah_ASM_Resume.pdf",

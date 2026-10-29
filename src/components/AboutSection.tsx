@@ -29,7 +29,7 @@ function TeamNetwork() {
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-24 md:py-36">
+    <section id="about" className="py-20 md:py-28">
       <div className="wrap">
         <SectionHeader label="01 / About" title="From the frontline to the bigger picture." />
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-10">

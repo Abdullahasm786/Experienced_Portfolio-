@@ -35,7 +35,7 @@ function Glyph({ kind }: { kind: "hub" | "bars" | "flow" }) {
 export default function CaseStudySection() {
   const [open, setOpen] = useState(0);
   return (
-    <section id="case-studies" className="py-24 md:py-36">
+    <section id="case-studies" className="py-20 md:py-28">
       <div className="wrap">
         <SectionHeader label="05 / Case Studies" title="Every issue has a path to clarity.">
           <p className="border-l-2 border-ember pl-4 text-base">Illustrative case studies based on relevant work patterns. They are not verified company projects or measured business results.</p>

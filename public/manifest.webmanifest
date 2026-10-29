@@ -1,0 +1,22 @@
+{
+  "name": "Abdullah A S M | Customer Support & Product Support",
+  "short_name": "ASM Abdullah",
+  "description": "Customer support leadership, escalation management, operations, and product support career interests.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0A0C10",
+  "theme_color": "#0A0C10",
+  "categories": ["business", "portfolio"],
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Contact", "url": "/#contact" },
+    { "name": "Experience", "url": "/#experience" }
+  ]
+}

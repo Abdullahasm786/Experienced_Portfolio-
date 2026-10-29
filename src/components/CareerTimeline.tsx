@@ -28,7 +28,7 @@ function CareerLine() {
 
 export default function CareerTimeline() {
   return (
-    <section id="experience" className="bg-ink2 py-24 md:py-36">
+    <section id="experience" className="bg-ink2 py-20 md:py-28">
       <div className="wrap">
         <SectionHeader label="02 / Experience" title="Growth through responsibility." />
         <CareerLine />
